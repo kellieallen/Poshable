@@ -29,9 +29,7 @@ app.use('/authtest', authTest);
 app.use('/log', log);
 
 
-app.listen(3000, function(){
-    console.log('Hey woman!!!')
-   });
+app.listen(process.env.PORT,() => console.log(`App is listening on ${process.env.PORT}'.`));
 
 
    

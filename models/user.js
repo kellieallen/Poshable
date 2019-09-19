@@ -1,7 +1,16 @@
 module.exports = function (sequelize, DataTypes) {
-   
+ 
 return sequelize.define('user', {
- username: DataTypes.STRING,
- passwordhash: DataTypes.STRING
+ username: {
+          type:DataTypes.STRING
+          /*validate: {
+              isAlphanumeric: {
+                  msg: 'Username must be letters or numbers only'
+              }
+            */},
+
+ passwordhash: {
+  type:DataTypes.STRING
+ }
 });
 };

@@ -47,7 +47,7 @@ router.post('/login', function(req, res) {
                             sessionToken: token
                         });
                     }else { //4
-                        res.status(502).send({ error: "you failed, yo" });
+                        res.status(502).send({ error: "fail fail" });
                     }
                 });
             } else {
