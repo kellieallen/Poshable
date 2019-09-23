@@ -8,7 +8,7 @@ var sequelize = require('./db')
 var bodyParser = require('body-parser')
 var log = require('./controllers/logcontroller');
 
-sequelize.sync();
+sequelize.sync(); // to reset tables, put {force:true} here AND DON'T FORGET TO REMOVE AFTER YOU RESTART SERVER
 
 app.use(bodyParser.json());
 

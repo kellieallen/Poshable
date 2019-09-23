@@ -11,9 +11,12 @@ router.post('/signup', function (req, res) {
     var username = req.body.user.username;
     var pass = req.body.user.password;
 
+
     User.create({
         username: username,
-        passwordhash: bcrypt.hashSync(pass, 10)
+        passwordhash: bcrypt.hashSync(pass, 10),
+    
+
 
     }) .then (
         function createSuccess(user) {
